@@ -25,11 +25,19 @@ public class RecActivity extends AppCompatActivity {
             for (int i=0;i<FriendsData.myFriendList.size();i++){
                 for (int j=0;j<FriendsData.recomFriendList.size();j++){
                     if (FriendsData.myFriendList.get( i ).getUserName().equals( FriendsData.recomFriendList.get( j ).getUserName() )){
-                        FriendsData.recomFriendList.get( j ).setAgreeOrRefuse( 1 );
+                        FriendsData.recomFriendList.get( j ).setAgreeOrRefuse(1);
                     }
                 }
             }
         }
+
+        //将当前的用户从推荐好友中删除
+        for (int i=0;i<FriendsData.recomFriendList.size();i++){
+            if (FriendsData.recomFriendList.get(i).getUserName().equals(FriendsData.UserInfo.getUserName())){
+                FriendsData.recomFriendList.remove(i);
+            }
+        }
+
         RecomFriendAdpater recomFriendAdpater = new RecomFriendAdpater(FriendsData.recomFriendList,RecActivity.this);
         mRecyclerView.setAdapter(recomFriendAdpater);
         recomFriendAdpater.notifyDataSetChanged();

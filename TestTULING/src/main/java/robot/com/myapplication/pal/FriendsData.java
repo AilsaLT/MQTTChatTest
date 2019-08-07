@@ -15,7 +15,7 @@ public class FriendsData {
     public static List<NewFriend> tempNewFriendList = new ArrayList<>();//暂存好友申请
 
     //初始化用户信息
-    public static NewFriend UserInfo = new NewFriend("CHEN", "BOY", "陈工今天也要加油呀！", "武汉", R.drawable.sign_pic, "添加好友");
+    public static NewFriend UserInfo = new NewFriend("CM", "男", "今天也要加油", "武汉", R.drawable.sign_pic, "添加好友");
 
     public static void addMyFriend(NewFriend friend) {
         myFriendList.add(friend);
@@ -43,9 +43,10 @@ public class FriendsData {
 
     //初始化推荐好友
     static {
-        recomFriendList.add(new NewFriend("HFH", "11", "11", "11", R.drawable.sign_pic));
-        recomFriendList.add(new NewFriend("HZH", "22", "22", "22", R.drawable.person1));
-        recomFriendList.add(new NewFriend("LT", "33", "33", "33", R.drawable.person2));
-        recomFriendList.add(new NewFriend("LJH", "44", "44", "44", R.drawable.person3));
+        recomFriendList.add(new NewFriend("HFH", "今天也要加油", "女", "武汉", R.drawable.sign_pic));
+        recomFriendList.add(new NewFriend("HZH", "今天也要加油", "女", "武汉", R.drawable.person1));
+        recomFriendList.add(new NewFriend("LT", "今天也要加油", "女", "武汉", R.drawable.person2));
+        recomFriendList.add(new NewFriend("LJH", "今天也要加油", "男", "武汉", R.drawable.person3));
+        recomFriendList.add(new NewFriend("CM", "今天也要加油", "男", "武汉", R.drawable.person4));
     }
 }

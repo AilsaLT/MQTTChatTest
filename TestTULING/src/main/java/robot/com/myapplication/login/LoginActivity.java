@@ -23,6 +23,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 import robot.com.myapplication.R;
 import robot.com.myapplication.dialog.DialogUIUtils;
+import robot.com.myapplication.pal.FriendsData;
 import robot.com.myapplication.pal.PalActivity;
 
 import static robot.com.myapplication.dialog.DialogUIUtils.dismiss;
@@ -172,6 +173,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         editor.putString( "ps", userVO.getPs() );
                         editor.putString( "uid", userVO.getUid() );
                         editor.commit();
+
+                        FriendsData.UserInfo.setUserName(username);
+
                         runOnUiThread( new Runnable() {
                             @Override
                             public void run() {

@@ -124,7 +124,7 @@ public class RecomFriendAdpater extends RecyclerView.Adapter<RecomFriendAdpater.
     public void onBindViewHolder(ViewHolder holder, int position) {
         addFriend = recomFriendList.get(position);
         holder.userName3.setText(recomFriendList.get(position).getUserName());
-        holder.userWrite3.setText(recomFriendList.get(position).getUserWrite());
+        holder.userWrite3.setText(recomFriendList.get(position).getSigature());
 
         if (recomFriendList.get(position).getUserImage() != null){
             Bitmap bitmap = BitmapFactory.decodeByteArray(recomFriendList.get(position).getUserImage(),0,recomFriendList.get(position).getUserImage().length,null);
