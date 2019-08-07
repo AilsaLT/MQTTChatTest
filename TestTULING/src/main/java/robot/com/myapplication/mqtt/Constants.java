@@ -6,7 +6,6 @@ package robot.com.myapplication.mqtt;
 
 public class Constants {
     public static final String MY_MQTT_BROADCAST_NAME = "com.ghl.mqttsubscript";
-
     public static final String MY_MQTT_BROADCAST_APPLY = "MY_MQTT_BROADCAST_APPLY";//好友申请的广播
     public static final String MY_MQTT_BROADCAST_AGREE = "MY_MQTT_BROADCAST_AGREE";//好友申请回复的广播
     public static final String ADD_FRIEND_FLAG = "添加好友";
