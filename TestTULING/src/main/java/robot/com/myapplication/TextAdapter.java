@@ -20,8 +20,12 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
+import robot.com.myapplication.app.AppStr;
 import robot.com.myapplication.tengxunyun.NTest;
 
 public class TextAdapter extends BaseAdapter{
@@ -78,11 +82,11 @@ public class TextAdapter extends BaseAdapter{
 		TextView seconds = (TextView)layout.findViewById( R.id.id_recorder_time );
 
 		tv.setVisibility( View.GONE );
-		tv_time.setVisibility( View.VISIBLE );
 		tv_img.setVisibility( View.GONE );
 		length.setVisibility( View.GONE );
 		seconds.setVisibility( View.GONE );
-        tv_time.setText(lists.get(position).getPublishTime());
+		tv_time.setVisibility(View.VISIBLE);
+		tv_time.setText(lists.get(position).getPublishTime());
 
 		//按照消息类型匹配布局
 		if(lists.get( position ).getInfType() == ListData.TEXT){
