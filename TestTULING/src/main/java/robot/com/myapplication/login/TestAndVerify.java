@@ -1,4 +1,4 @@
-package robot.com.myapplication.login;
+﻿package robot.com.myapplication.login;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+
 
 
 /**
